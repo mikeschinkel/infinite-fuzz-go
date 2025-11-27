@@ -117,10 +117,12 @@ GOEXPERIMENT=jsonv2 ./infinite-fuzz.sh
 
 ## Examples
 
-### Example 1: Run All Fuzz Tests Overnight
+### Example 1: Run All Fuzz Tests Overnight IN BACKGROUND
 
 ```bash
 cd test
+echo "WARNING: This runs in background and survives terminal closing!"
+echo "         To stop it, used ./infinite-fuzz.sh -k"
 nohup ./infinite-fuzz.sh > fuzz.log 2>&1 &
 # Check progress: tail -f fuzz.log
 # Stop: ./infinite-fuzz.sh -k
