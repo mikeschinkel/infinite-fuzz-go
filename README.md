@@ -169,7 +169,7 @@ your-project/
 ### vs. Running Go Fuzz Manually
 
 ```bash
-# Manual approach (stops after default timeout)
+# Manual approach (stops after default timeout or first issue found)
 go test -fuzz=FuzzParseTemplate ./test
 
 # With this script (runs forever, multiple targets in parallel)
