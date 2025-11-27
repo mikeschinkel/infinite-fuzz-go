@@ -122,7 +122,7 @@ GOEXPERIMENT=jsonv2 ./infinite-fuzz.sh
 ```bash
 cd test
 echo "WARNING: This runs in background and survives terminal closing!"
-echo "         To stop it, used ./infinite-fuzz.sh -k"
+echo "         To stop it, use ./infinite-fuzz.sh -k"
 nohup ./infinite-fuzz.sh > fuzz.log 2>&1 &
 # Check progress: tail -f fuzz.log
 # Stop: ./infinite-fuzz.sh -k
