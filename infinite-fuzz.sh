@@ -181,7 +181,7 @@ fuzz_target() {
 if [ -z "$TARGETS" ]; then
     # Auto-discover Fuzz functions
     echo "Auto-discovering fuzz targets..."
-    FUZZ_TARGETS=($(discover_fuzz_targets))
+    mapfile -t FUZZ_TARGETS < <(discover_fuzz_targets)
 
     if [ ${#FUZZ_TARGETS[@]} -eq 0 ]; then
         echo "Error: No Fuzz* functions found in *_test.go files"
